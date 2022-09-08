@@ -1,0 +1,31 @@
+#dieRoller{
+  width: 100px;
+  height: 110px;
+  /* background-color: black; */
+  /* background-image: url('assets/images/dices/d20.png'); */
+  /* background-image: url('../assets/images/dices/d20.png') ; */
+  /* background-position: center;
+  background-size: cover; */
+  align-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  display: flex;
+}
+#d20image{
+  width: 100px;
+  height: 100px;
+}
+#dieResult{
+position: relative;
+/* top: 50px; */
+left: -55px;
+align-self: center;
+color: aliceblue;
+font-size: large;
+font-weight: bolder;
+}
+#rollDie{
+  width: 100px;
+  /* position: relative;
+  top: 500px; */
+}

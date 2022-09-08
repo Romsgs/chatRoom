@@ -12,16 +12,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"
     integrity="sha512-VJ6+sp2E5rFQk05caiXXzQd1wBABpjEj1r5kMiLmGAAgwPItw1YpqsCCBtq8Yr1x6C49/mTpRdXtq8O2RcZhlQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dado.css">
 </head>
 
 <body>
-  <form id="chat">
-    <input type="text" name="username" placeholder="username">
-    <div class="messages"></div>
-    <input type="text" name="message" placeholder="message">
-    <button type="submit"></button>
-    <script type="text/javascript">
+  <div id="mainChat">
+    <form id="chat">
+      <input type="text" name="username" placeholder="username">
+      <div class="messages"></div>
+      <input type="text" name="message" placeholder="message" id="messageField">
+      <button type="submit"></button>
+    </form>
+
+    <div id="dieRoller">
+      <img src="assets/images/dices/d20.png" id="d20image" alt="d20Image">
+      <p id="dieResult"> 20
+      </p>
+      <button id="rollDie" onclick=roll>Roll</button>
+    </div>
+  </div>
+  <!-- <script src="/JS/rollDie.js"></script> -->
+  <script src="JS/socketScript.js"></script>
+</body>
+
+</html>
+
+<!-- <script type="text/javascript">
       var socket = io(
           'http://localhost:3000'
           ) // essa variavel esta no arquivo por causa da importacao de socket io la em cima no meta...
@@ -50,8 +67,4 @@
           socket.emit('sendMessage', messageObj)
         }
       })
-    </script>
-  </form>
-</body>
-
-</html>
+    </script> -->
