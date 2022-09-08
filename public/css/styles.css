@@ -7,7 +7,11 @@ html, body {
   padding: 0;
   box-sizing: border-box;
 }
-
+#mainChat{
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+}
 #chat {
   height: 100%;
   display: flex;
@@ -42,4 +46,8 @@ button {
   margin: 20px 0;
   border: 1px solid #ddd;
   padding: 20px;
+  overflow: auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  break-inside: auto;
 }

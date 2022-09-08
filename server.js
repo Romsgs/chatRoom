@@ -6,7 +6,7 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'public'));
+app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   socket.on('sendMessage', (data) => {
     // console.log(data);
     messages.push(data);
-    socket.broadcast.emit('receivedMessage', data)
+    socket.broadcast.emit('receivedMessage', data);
   });
 });
 
