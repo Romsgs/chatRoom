@@ -24,6 +24,7 @@ $('#chat').submit(function (event) {
     var messageObj = `<div class="message"><strong> ${author}: </strong> ${message} `;
     renderMessage(messageObj);
     socket.emit('sendMessage', messageObj);
+    messageField.value = '';
   }
 });
 // socket.on()
